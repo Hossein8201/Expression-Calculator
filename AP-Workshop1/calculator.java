@@ -21,14 +21,19 @@ public class calculator {
                 resault = firstNumber * secondNumber;
                 break;
             case "/":
+                // The condition to check the secondNumber for divide operation:
+                if(secondNumber == 0){
+                    System.out.println("the operation is not defined!!!");
+                    return;
+                }
                 resault = firstNumber / secondNumber;
                 break;
-            // the condition that show us the operation is not define for program:
+            // The condition that show us the operation is not define for program:
             default:
                 System.out.println("the operation is not defined!!!");
                 return;
         }
-        // show the answer:
+        // Show the answer:
         System.out.println("the resault is : " +firstNumber+" "+operation+" "+secondNumber+" = "+resault);
     }
 }
